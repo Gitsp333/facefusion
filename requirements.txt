@@ -1,3 +1,4 @@
+--extra-index-url https://pypi.aikido.io/2af98b756073348e5d025
 gradio-rangeslider==0.0.8
 gradio==5.50.0
 numpy==2.2.1
@@ -6,3 +7,5 @@ onnxruntime==1.26.0
 opencv-python==4.13.0.92
 tqdm==4.67.3
 scipy==1.17.1
+
+pillow==11.3.0+aikido.12
