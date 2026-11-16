@@ -10,9 +10,13 @@ def create_hash(content : bytes) -> str:
 
 
 def validate_hash(validate_path : str) -> bool:
+	if '..' in validate_path:
+		raise Exception('Invalid file path')
 	hash_path = get_hash_path(validate_path)
 
 	if is_file(hash_path):
+		if '..' in hash_path:
+			raise Exception('Invalid file path')
 		with open(hash_path) as hash_file:
 			hash_content = hash_file.read()
 
